@@ -40,3 +40,7 @@ a.card:hover {
 .jumbotron:hover {
   background-color: #ecf0f1;
 }
+
+.error{
+  color: red
+}

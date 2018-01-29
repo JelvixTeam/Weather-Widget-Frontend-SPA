@@ -15,19 +15,19 @@ export default class Card extends Component {
     } = this.props;
 
     return (
-      <div class="col-lg-4 col-md-6">
-        <a href="#?" class="card bg-light mb-3">
-          <div onClick={()=>{history.push(`/${value.id}`)}} class="card-body">
+      <div className="col-lg-4 col-md-6">
+        <a href="#?" className="card bg-light mb-3">
+          <div onClick={()=>{history.push(`/${value.id}`)}} className="card-body">
             <button
               onClick={()=>close(value.id)}
               type="button"
-              class="close"
+              className="close"
               aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-            <h4 class="card-title font-weight-bold">{value.name}</h4>
-            <h5 class="card-subtitle mb-2 text-muted">{value.sys.country}</h5>
-            <p class="card-text">{(value.main.temp - 273.15).toFixed(1)}°C</p>
+            <h4 className="card-title font-weight-bold">{value.name}</h4>
+            <h5 className="card-subtitle mb-2 text-muted">{value.sys.country}</h5>
+            <p className="card-text">{(value.main.temp - 273.15).toFixed(1)}°C</p>
           </div>
         </a>
       </div>

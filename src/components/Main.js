@@ -16,40 +16,40 @@ class Main extends Component {
 
     return (
       <div>
-        <header class="header">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-              <i class="fa fa-cloud" aria-hidden="true"></i>
+        <header className="header">
+          <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <a className="navbar-brand" href="#">
+              <i className="fa fa-cloud" aria-hidden="true"></i>
             </a>
-            <div class="navbar-nav">
-              <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+            <div className="navbar-nav">
+              <a className="nav-item nav-link active" href="#">Home <span className="sr-only">(current)</span></a>
             </div>
           </nav>
         </header>
-        <main class="main pt-5 pb-5">
-          <div class="container">
-            <div class="row justify-content-md-center pb-5">
-              <div class="col-lg-6 col-md-8">
-                <div class="input-group">
+        <main className="main pt-5 pb-5">
+          <div className="container">
+            <div className="row justify-content-md-center pb-5">
+              <div className="col-lg-6 col-md-8">
+                <div className="input-group">
                   <input
                     ref={(input)=>{this.city=input}}
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     placeholder="Recipient's username"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"/>
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary">
+                  <div className="input-group-append">
+                    <button className="btn btn-outline-secondary">
                       <i
                         onClick={()=>getWeather(this.city.value)}
-                        class="fa fa-search"></i>
+                        className="fa fa-search"></i>
                     </button>
                   </div>
                 </div>
-                {error ? <p>{error}</p> : null}
+                {error ? <p className="error">{error}</p> : null}
               </div>
             </div>
-            <div class="row">
+            <div className="row">
               {arr.length ?
                 arr.map((item)=>(
                   <Card
